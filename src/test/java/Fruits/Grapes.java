@@ -34,9 +34,9 @@ public class Grapes {
 		 public void login() throws InterruptedException {
 			 System.out.println("orangeHRM is opened");
 			 Thread.sleep(10000);
-			 driver.findElement(By.xpath("//*[@placeholder='Username']")).sendKeys("Admin");
+			 driver.findElement(By.name("//*[@placeholder='Username']")).sendKeys("Admin");
 			 Thread.sleep(10000);
-			driver.findElement(By.xpath("//*[@name='password']")).sendKeys("admin123");
+			driver.findElement(By.name("//*[@name='password']")).sendKeys("admin123");
 			Thread.sleep(10000);
 			 driver.findElement(By.xpath("//*[@type='submit']")).click();
 			 Thread.sleep(3000);
@@ -44,13 +44,14 @@ public class Grapes {
 			 //public void Search() throws InterruptedException {
 			 //driver.findElement(By.xpath("//*[@placeholder='Search']")).click();
 			 //Thread.sleep(2000);}
-			 
+		 }
 		 @Test(enabled= true, priority=1)
 			 public void Admin() throws InterruptedException  {
 			 driver.findElement(By.xpath("//*[@class='oxd-main-menu-item active']")).click();
 			 Thread.sleep(2000);
 			 List<WebElement> ele= driver.findElements(By.tagName("a"));
 			 System.out.println(ele.size());
+			 int i = 0;
 			 for(int i =0; i<ele.size());
 			System.out.println(ele.get(i).getText(i));
 			System.out.println(ele.get(i).getAttribute(i));
@@ -75,7 +76,7 @@ public class Grapes {
 			 }}*/
 			 
 			 
-		 
+		 }}
 		 
 
 	
